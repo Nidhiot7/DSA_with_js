@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+</head>
+
+<body>
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button>
+
+    <script>
+        let data = [9, 45, 2, 8, 45, 23, 7, 78, 0, 11, 77];
+        for (let i = 0; i < data.length; i++) {
+            document.write(`Array ${i} is ${data[i]} <br>`); //This is a traversing means ek ek element ko check karna..
+        }
+        let x = 10;
+        document.write(data[x]); //This is a accessing means perticular ek element ko check karna..
+
+        function getElement() {
+            let el = document.getElementById("element").value;
+            if (el < data.length && typeof parseInt(el) === "number") {
+                alert(data[el]);
+            } else {
+                alert("Please enter valid input");
+            }
+        }
+    </script>
+</body>
+
+</html>

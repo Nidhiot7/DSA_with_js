@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head and Tail Recursion and reverse array recursion</title>
+</head>
+
+<body>
+    <script>
+        //       function colors() {
+        //     let data = 20;
+        //     console.warn(data);
+        //     if(true){
+        //         console.warn(data*20)
+        //     }else{
+        //         console.warn(data/20) 
+        //     }
+        //   }
+        //   function days() {
+        //     colors();
+        //   }
+        //   function fruits() {
+        //     days();
+        //   }
+        //   function topFunction() {
+        //     fruits();
+        //   }
+        //   topFunction()
+
+        // function test(x) {
+        //     console.warn(x)
+        //     if (x > 0) {
+        //         test(x - 1)
+        //     }
+        //     console.warn(x)
+        // }
+
+        // let data = 5
+        // test(data)
+
+        let data = [5, 12, 65, 89, 0, 100, 200];  //reverse array
+        let temp;
+        function customReverse(data, start, end) {
+            console.warn(data)
+            if (start <= end) {
+                temp = data[start];
+                data[start] = data[end];
+                data[end] = temp;
+                customReverse(data, start + 1, end - 1);
+            }
+        }
+
+        customReverse(data, 0, data.length - 1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Normal Function
+
+        // function f(a, b){
+        //     const sum  = a + b;
+        //     sum = 3;
+        //     return sum;
+        // }
+        // console.log(f(2, 4));
+
+        // Anonymous Function
+
+        //  let f = function (a, b){
+        //     const sum  = a + b;
+        //     return sum;
+        // }
+        // console.log(f(2, 4));
+
+        // Immediate Invoke
+
+        // let f = function (a, b){
+        //     const sum  = a + b;
+        //     return sum;
+        // }(2, 4)
+        // console.log(f);
+
+        // Arrow Function
+        //    Jab hum function ko defined karte hai to (a, b) yeh parameter hota par jab call karte hai to wo argument hota hai
+        // let f =  (a, b) => {
+        //     const sum  = a + b;
+        //     return sum;
+        // }
+        // console.log(f(2, 4));
+
+        // function createHelloWorld(){
+        //     function f(){
+        //         return "Hello World";
+        //     }
+        //     return f;
+        // }
+
+        // Function within function
+
+        // function fun(){
+        //     function f(a, b){
+        //         var sum = a + b;
+        //         return sum;
+        //     }
+        //     return f
+        // }
+        // var numsum = fun();
+        // console.log(numsum(2, 3));
+
+        // var expect = function (val) {
+        //     return {
+        //         toBe(val1) {
+        //             if (val === val1) return true
+        //             else throw new Error("Not Equal");
+        //         },
+        //         notToBe(val1) {
+        //             if (val !== val1) return true
+        //             else throw new Error("Equal");
+        //         }
+        //     }
+        //     return obj;
+        // }
+
+        // var createCounter = function (init) {
+        //     const n = init;
+        //     var obj = {
+        //         increment() {
+        //             return init += 1;
+        //         },
+        //         decrement() {
+        //             return init -= 1;
+        //         },
+        //         reset() {
+        //             return init = n;
+        //         }
+        //     }
+        //     return obj;
+        // };
+        // --------------------------------------------------------OR within function
+        // var createCounter = function (init) {
+        //     const n = init;
+
+        //     function increment() {
+        //         return init += 1;
+        //     }
+        //     function decrement() {
+        //         return init -= 1;
+        //     }
+        //     function reset() {
+        //         return init = n;
+        //     }
+        //     return {
+        //         increment, decrement, reset
+        //     }
+        // };
+
+        // var map = function (arr, fn) {
+        //     const newarr = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         newarr[i] = fn(arr[i], i);
+        //     }
+        //     return newarr;
+        // };
+
+        // var filter = function (arr, fn) {
+        //     let newArr = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (fn(arr[i], i)) {
+        //             newArr.push(arr[i])
+        //         }
+        //     }
+        //     return newArr;
+        // };
+
+        // var argumentsLength = function (...args) {
+        //     return args.length;
+        // };
+
+        // var argumentsLength = function (...args) {
+        //     let count = 0;
+        //     for (let i = 0; i < args.length; i++) {
+        //         count += 1;
+        //     }
+        //     return count;
+        // };
+
+        // var once = function (fn) {
+        //     let called = false;
+        //     return function (...args) {
+        //         if (called) {
+        //             return undefined;
+        //         }
+        //         called = true
+        //         return fn(...args);
+        //     }
+        // };
+
+        // Memoize Function
+        // function memoize(func){
+        //     let cache = {};
+        //     return function(...args){
+        //         let n = args[0];
+        //         if(n in cache){
+        //             return cache[n]
+        //         }else{
+        //             let result = func(n)
+        //             cache[n] = result
+        //             return result;
+        //         }
+        //     }
+        // }
+
+        // Promises
+        // const myPromise = new Promise(function(resolve, reject){
+        //     setTimeout(function(){
+        //         console.log("async task");
+        //         resolve()
+        //     }, 2000)
+        // });
+
+        // const myPromise = new Promise(function(resolve, reject){
+        //     let fileLoader = true;
+        //     if(fileLoader){
+        //         resolve("file loader");
+        //     }else{
+        //         reject("file not loaded");
+        //     }
+        // });
+
+        // myPromise.then(function(value){
+        //     console.log(value)
+        // }).catch(error => console.log(error));      //first way to write a code
+
+        // second way
+
+        // const myPromise = new Promise((resolve, reject) => {
+        //     let fileLoader = true;
+        //     if (fileLoader) {
+        //         resolve("file loader");
+        //     } else {
+        //         reject("file not loaded");
+        //     }
+        // });
+
+        // myPromise.then(console.log(value))
+        //     .catch(error => console.log(error));    
+
+        // var cancellable = function (fn, args, t) {
+        //     const cancelFn = function () {
+        //         clearTimeout(timer)
+        //     }
+        //     const timer = setTimeout(() => {
+        //         fn(...args)
+        //     }, t)
+        //     return cancelFn
+        // };
+    </script>
+</body>
+
+</html>
